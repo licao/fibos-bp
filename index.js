@@ -19,18 +19,19 @@ producername = keys[0];
 public_key = keys[1];
 private_key = keys[2];
 
+fibos.config_dir = "./blockData";
+fibos.data_dir = "./blockData";
 
 var p2p_peer_address = [
-	"p2p-mainnet.fibos123.com:9977",
-	"seed.fibos.rocks:10100",
-	"p2p.mainnet.fibos.me:80",
-	"p2p.eoschina.me:10300",
-	"se-p2p.fibos.io:9870",
-	"sl-p2p.fibos.io:9870",
-	"to-p2p.fibos.io:9870",
-	"ca-p2p.fibos.io:9870",
-	"ln-p2p.fibos.io:9870",
-	"va-p2p.fibos.io:9870"
+	"seed.bitze.site:9870",
+    "p2p-mainnet.fibos123.com:9977",
+    "seed.fibos.rocks:10100",
+    "seed-mainnet.fibscan.io:9103",
+    "p2p.mainnet.fibos.me:80",
+    "p2p.foshenzhenbp.com:9877",
+    "p2p.eoschina.me:10300",
+    "fibos-p2p.slowmist.io:9870",
+    "fibos.qubitfund.com:9870"
 ];
 
 var chain_config = {
@@ -42,7 +43,6 @@ var chain_config = {
 if (!fs.exists(fibos.data_dir) && !fs.exists(fibos.config_dir)) {
 	chain_config['genesis-json'] = "genesis.json";
 }
-
 
 
 fibos.config_dir = "./blockData"; //config.ini位置
@@ -73,5 +73,8 @@ fibos.load("producer", {
 
 
 fibos.load("chain", chain_config);
+fibos.load("chain_api");
+fibos.load("history");
+fibos.load("history_api");
 
 fibos.start();
