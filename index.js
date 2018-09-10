@@ -24,14 +24,18 @@ fibos.data_dir = "./blockData";
 
 var p2p_peer_address = [
 	"seed.bitze.site:9870",
-    "p2p-mainnet.fibos123.com:9977",
-    "seed.fibos.rocks:10100",
-    "seed-mainnet.fibscan.io:9103",
-    "p2p.mainnet.fibos.me:80",
-    "p2p.foshenzhenbp.com:9877",
-    "p2p.eoschina.me:10300",
-    "fibos-p2p.slowmist.io:9870",
-    "fibos.qubitfund.com:9870"
+	"p2p-mainnet.fibos123.com:9977",
+	"api.fibosgenesis.com:8870",
+	"seed.fibos.rocks:10100",
+	"seed-mainnet.fibscan.io:9103",
+	"p2p.mainnet.fibos.me:80",
+	"p2p.foshenzhenbp.com:9877",
+	"p2p.eoschina.me:10300",
+	"p2p-mainnet.ilovefibos.com:9876",
+	"seed.fiboso.com:9965",
+	"fibos-p2p.slowmist.io:9870",
+	"185.133.193.1:9870",
+	"fibos.qubitfund.com:9870"
 ];
 
 var chain_config = {
