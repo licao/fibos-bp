@@ -5,7 +5,6 @@ console.notice("start FIBOS producer nodes");
 
 var keys = "";
 
-// 公共钥,私钥
 while (true) {
 	keys = console.readLine("input the  produce-rname:public-key:private-key! oooo:xxxxx:xxxx\n");
 	if (keys) break;
@@ -30,11 +29,11 @@ var p2p_peer_address = [
 	"ln-p2p.fibos.io",
 	"va-p2p.fibos.io",
 	"fibos.smr123.com:7890",
+	"p2p-mainnet.fibos123.com:9977",
 	"seed-mainnet.fibscan.io:9103",
-	"api.fibosgenesis.com:8870",
 	"seed.bitze.site:9870",
 	"seed.fibos.rocks:10100",
-	"p2p.eoschina.me:10300",
+	"p2p.xm.fo:10300",
 	"api.fibosgenesis.com:9870",
 	"fibos.qubitfund.com:9870",
 	"p2p.foshenzhenbp.com:9877",
@@ -44,8 +43,8 @@ var p2p_peer_address = [
 ];
 
 var chain_config = {
-	// "contracts-console": true,
-	// 'chain-state-db-size-mb': 8 * 1024,
+	"contracts-console": true,
+	'chain-state-db-size-mb': 8 * 1024,
 	// "delete-all-blocks": true
 };
 
@@ -54,18 +53,14 @@ if (!fs.exists(fibos.data_dir) && !fs.exists(fibos.config_dir)) {
 }
 
 
-fibos.config_dir = "./blockData"; //config.ini位置
-fibos.data_dir = "./blockData";
-
 console.notice("config_dir:", fibos.config_dir);
 console.notice("data_dir:", fibos.data_dir);
 
-//建议bp不开打http
 fibos.load("http", {
-	"http-server-address": "0.0.0.0:8870",
+	"http-server-address": "127.0.0.1:8870",
 	"access-control-allow-origin": "*",
 	"http-validate-host": false,
-	"verbose-http-errors": true //打开报错
+	"verbose-http-errors": true
 });
 
 fibos.load("net", {
@@ -83,7 +78,5 @@ fibos.load("producer", {
 
 fibos.load("chain", chain_config);
 fibos.load("chain_api");
-fibos.load("history");
-fibos.load("history_api");
 
 fibos.start();
