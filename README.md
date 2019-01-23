@@ -20,3 +20,16 @@
 
 	3.启动节点
 
+		fibos index.js
+
+
+## 其他
+	
+	启动自动领取工资(config 配置领取时间 的小时和分钟 为北京时间)
+
+		fibos claimrewards.js
+
+	手动更新p2p文件
+
+		fibos updatep2p.js
+
