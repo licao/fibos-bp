@@ -1,0 +1,12 @@
+{
+  "name": "fibos-bp",
+  "version": "1.0.0",
+  "description": "bp tool",
+  "repository": "",
+  "keywords": "",
+  "author": "lc",
+  "license": "ISC",
+  "dependencies": {
+    "fibos.js": "^0.3.4"
+  }
+}
