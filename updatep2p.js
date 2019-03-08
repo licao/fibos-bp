@@ -24,9 +24,9 @@ producers.rows.forEach((d) => {
 	const owner = d.owner;
 	let producer = JSON.parse(d.json);
 
-	producer.nodes.forEach(r => {
+	if (producer.nodes) producer.nodes.forEach(r => {
 		if (r.p2p_endpoint && p2pddress.indexOf(r.p2p_endpoint) == -1) {
-			p2pddress.push(r.p2p_endpoint);
+			p2pddress.push(r.p2p_endpoint.replice('http://', ''));
 		}
 	});
 })
