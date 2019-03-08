@@ -26,7 +26,7 @@ producers.rows.forEach((d) => {
 
 	if (producer.nodes) producer.nodes.forEach(r => {
 		if (r.p2p_endpoint && p2pddress.indexOf(r.p2p_endpoint) == -1) {
-			p2pddress.push(r.p2p_endpoint.replice('http://', ''));
+			p2pddress.push(r.p2p_endpoint.replace('http://', ''));
 		}
 	});
 })
