@@ -4,7 +4,7 @@ const FIBOS = require('fibos.js');
 
 let fibos = FIBOS({
 	chainId: CONFIG["chainId"],
-	httpEndpoint: CONFIG["httpEndpoint"],
+	httpEndpoint: "http://to-rpc.fibos.io:8870",
 	logger: {
 		log: null,
 		error: null
